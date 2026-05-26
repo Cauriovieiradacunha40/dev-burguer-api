@@ -1,0 +1,40 @@
+
+# 🌳 ESTRUTURA OFICIAL — DEV-BURGUER-API
+
+
+DEV-BURGUER-API/
+│
+├── node_modules/
+│
+├── src/
+│   │
+│   ├── app/
+│   │   │
+│   │   └── models/
+│   │
+│   ├── config/
+│   │   │
+│   │   └── database.js
+│   │
+│   ├── database/
+│   │   │
+│   │   └── migrations/
+│   │
+│   ├── app.js
+│   │
+│   └── server.js
+│
+├── .gitignore
+│
+├── .sequelizerc
+│
+├── biome.json
+│
+├── package.json
+│
+├── pnpm-lock.yaml
+│
+├── PROJECT_STRUCTURE.md
+│
+└── PROJECT_STATUS.md
+
