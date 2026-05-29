@@ -1,7 +1,6 @@
 
 # 🌳 ESTRUTURA OFICIAL — DEV-BURGUER-API
 
-
 DEV-BURGUER-API/
 │
 ├── node_modules/
@@ -14,11 +13,13 @@ DEV-BURGUER-API/
 │   │
 │   ├── config/
 │   │   │
-│   │   └── database.js
+│   │   └── database.cjs
 │   │
 │   ├── database/
 │   │   │
 │   │   └── migrations/
+│   │       │
+│   │       └── 20260527090857-create-users-table.js
 │   │
 │   ├── app.js
 │   │
@@ -37,4 +38,3 @@ DEV-BURGUER-API/
 ├── PROJECT_STRUCTURE.md
 │
 └── PROJECT_STATUS.md
-

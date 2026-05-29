@@ -54,3 +54,37 @@
 **26. Criada a pasta `config`** — adicionada camada de configuração da aplicação, centralizando arquivos responsáveis por parâmetros e conexões do sistema.
 
 **27. Criado o arquivo `database.js` dentro de `config`** — preparado arquivo responsável pela futura configuração da conexão entre a API e o PostgreSQL containerizado.
+
+**28. Criada a primeira migration `create-users-table`** — iniciada a modelagem estrutural do banco de dados através do Sequelize, preparando a criação da tabela de usuários.
+
+**29. Corrigida a configuração do arquivo `.sequelizerc`** — ajustados os caminhos de migrations e models para permitir que o Sequelize localizasse corretamente a estrutura do projeto.
+
+**30. Executada a migration com sucesso utilizando `pnpm sequelize db:migrate`** — criada fisicamente a tabela `users` dentro do PostgreSQL containerizado.
+
+**31. Criado o arquivo de migration `20260527090857-create-users-table.js`** — registrada oficialmente a primeira alteração estrutural versionada do banco de dados.
+
+**32. Configurada a tabela `users` com UUID como chave primária** — adotado padrão moderno de identificação única global para usuários.
+
+**33. Configurado o campo `email` com restrição de unicidade (`unique`)** — garantindo que não existam usuários duplicados com o mesmo endereço de e-mail.
+
+**34. Conectado o PostgreSQL ao Beekeeper Studio** — permitindo visualização e gerenciamento gráfico do banco de dados.
+
+**35. Validada a criação da tabela `users` no PostgreSQL** — confirmada a existência da tabela e de todas as colunas definidas pela migration.
+
+**36. Validada a criação automática da tabela `SequelizeMeta`** — confirmado o mecanismo utilizado pelo Sequelize para controlar o histórico de migrations executadas.
+
+**37. Realizado troubleshooting completo da infraestrutura Docker + PostgreSQL + Sequelize** — identificados e corrigidos problemas envolvendo container parado, conexão com banco e execução de migrations.
+
+**38. Validada visualmente a estrutura da tabela `users` no Beekeeper Studio** — confirmadas as colunas:
+
+* id
+* name
+* email
+* password_hash
+* admin
+* created_at
+* updated_at
+
+**39. Confirmado o funcionamento completo do fluxo Docker → PostgreSQL → Sequelize → Migration → Beekeeper** — validando a integração entre todas as camadas da infraestrutura backend.
+
+
