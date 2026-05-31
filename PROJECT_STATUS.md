@@ -87,4 +87,8 @@
 
 **39. Confirmado o funcionamento completo do fluxo Docker → PostgreSQL → Sequelize → Migration → Beekeeper** — validando a integração entre todas as camadas da infraestrutura backend.
 
+40. Estudado o padrão de arquitetura MVC (Model-View-Controller) — introduzido o conceito de separação de responsabilidades entre dados (Model), controle de requisições (Controller) e interface (View).
 
+41. Criada a pasta controllers dentro de app — iniciada a camada responsável por receber requisições, coordenar a lógica da aplicação e retornar respostas, seguindo o padrão MVC.
+
+**42. Criado o arquivo `User.js` dentro da pasta `models`** — iniciado o primeiro Model Sequelize do projeto, responsável por representar a tabela `users` dentro da aplicação Node.js.

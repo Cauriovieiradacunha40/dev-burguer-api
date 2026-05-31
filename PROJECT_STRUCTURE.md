@@ -1,4 +1,6 @@
 
+
+
 # 🌳 ESTRUTURA OFICIAL — DEV-BURGUER-API
 
 DEV-BURGUER-API/
@@ -9,7 +11,11 @@ DEV-BURGUER-API/
 │   │
 │   ├── app/
 │   │   │
+│   │   ├── controllers/
+│   │   │
 │   │   └── models/
+│   │       │
+│   │       └── User.js
 │   │
 │   ├── config/
 │   │   │
@@ -38,3 +44,5 @@ DEV-BURGUER-API/
 ├── PROJECT_STRUCTURE.md
 │
 └── PROJECT_STATUS.md
+
+
