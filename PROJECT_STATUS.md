@@ -92,3 +92,5 @@
 41. Criada a pasta controllers dentro de app — iniciada a camada responsável por receber requisições, coordenar a lógica da aplicação e retornar respostas, seguindo o padrão MVC.
 
 **42. Criado o arquivo `User.js` dentro da pasta `models`** — iniciado o primeiro Model Sequelize do projeto, responsável por representar a tabela `users` dentro da aplicação Node.js.
+
+**43. Criado o arquivo `index.js` dentro da pasta `database`** — centralizada a inicialização do Sequelize, a conexão com o PostgreSQL e o registro dos Models da aplicação.
