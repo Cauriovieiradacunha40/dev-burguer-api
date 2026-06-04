@@ -102,3 +102,7 @@
 46. Validado o fluxo completo de persistência de dados — realizada a criação de um usuário através da API, com geração de UUID, utilização do Model Sequelize, execução de INSERT no PostgreSQL e confirmação visual do registro através do Beekeeper Studio.
 
 47. Criado o arquivo `routes.js` — centralizadas as rotas da aplicação em um arquivo dedicado, separando a definição dos endpoints da configuração principal do servidor e preparando a estrutura para crescimento organizado da API.
+
+48. Criado o arquivo `UserController.js` dentro da pasta `controllers` — iniciada a camada Controller da arquitetura MVC, responsável por receber requisições HTTP, coordenar as operações da aplicação e retornar respostas ao cliente, separando a lógica de controle das rotas e dos modelos.
+
+49. Implementado o método `store()` no `UserController` — criada a lógica responsável por receber dados da requisição, gerar um UUID, criar usuários utilizando o Sequelize e retornar uma resposta HTTP 201 sem expor o campo de senha.
