@@ -27,6 +27,8 @@ DEV-BURGUER-API/
 │   │       │
 │   │       └── 20260527090857-create-users-table.js
 │   │
+│   ├── routes.js
+│   │
 │   ├── app.js
 │   │
 │   └── server.js

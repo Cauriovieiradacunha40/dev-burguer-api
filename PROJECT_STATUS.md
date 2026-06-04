@@ -94,3 +94,11 @@
 **42. Criado o arquivo `User.js` dentro da pasta `models`** — iniciado o primeiro Model Sequelize do projeto, responsável por representar a tabela `users` dentro da aplicação Node.js.
 
 **43. Criado o arquivo `index.js` dentro da pasta `database`** — centralizada a inicialização do Sequelize, a conexão com o PostgreSQL e o registro dos Models da aplicação.
+
+44. Instalado o pacote `uuid` — adicionada biblioteca responsável pela geração de identificadores únicos universais (UUID), amplamente utilizada para criação de IDs únicos em aplicações backend e sistemas distribuídos.
+
+45. Integrado o pacote `uuid` à aplicação — utilizada a função `v4()` para geração automática de identificadores únicos (UUID), permitindo criar usuários com IDs únicos antes da persistência no banco de dados.
+
+46. Validado o fluxo completo de persistência de dados — realizada a criação de um usuário através da API, com geração de UUID, utilização do Model Sequelize, execução de INSERT no PostgreSQL e confirmação visual do registro através do Beekeeper Studio.
+
+47. Criado o arquivo `routes.js` — centralizadas as rotas da aplicação em um arquivo dedicado, separando a definição dos endpoints da configuração principal do servidor e preparando a estrutura para crescimento organizado da API.
