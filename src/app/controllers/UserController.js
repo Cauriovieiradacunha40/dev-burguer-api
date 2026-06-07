@@ -6,12 +6,37 @@ update -> atualiza um dado específico
 delete -> deleta um dado específico
  */
 
+import bcrypt from 'bcrypt';
 import { v4 } from 'uuid';
+import * as Yup from 'yup';
 import User from '../models/User.js';
 
 class UserController {
   async store(request, response) {
-    const { name, email, password_hash, admin } = request.body;
+    const schema = Yup.object({
+      name: Yup.string().required(),
+      email: Yup.string().email().required(),
+      password: Yup.string().min(6).required(),
+      admin: Yup.boolean(),
+    });
+    try {
+      schema.validateSync(request.body, { abortEarly: false, strict: true });
+    } catch (err) {
+      return response.status(400).json({ errors: err.errors });
+    }
+
+    const { name, email, password, admin } = request.body;
+
+    const existingUser = await User.findOne({
+      where: {
+        email,
+      },
+    });
+    if (existingUser) {
+      return response.status(400).json({ mensagem: 'Email already taken' });
+    }
+
+    const password_hash = await bcrypt.hash(password, 10);
 
     const user = await User.create({
       id: v4(),
@@ -22,10 +47,10 @@ class UserController {
     });
 
     return response.status(201).json({
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        admin: user.admin,
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      admin: user.admin,
     });
   }
 }
