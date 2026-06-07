@@ -106,3 +106,17 @@
 48. Criado o arquivo `UserController.js` dentro da pasta `controllers` — iniciada a camada Controller da arquitetura MVC, responsável por receber requisições HTTP, coordenar as operações da aplicação e retornar respostas ao cliente, separando a lógica de controle das rotas e dos modelos.
 
 49. Implementado o método `store()` no `UserController` — criada a lógica responsável por receber dados da requisição, gerar um UUID, criar usuários utilizando o Sequelize e retornar uma resposta HTTP 201 sem expor o campo de senha.
+
+50. Validado o primeiro teste de API com Insomnia — realizada uma requisição POST para /users, enviando dados em JSON, executando o fluxo completo Routes → Controller → Model → Sequelize → PostgreSQL e recebendo resposta HTTP 201 Created.
+
+51. Instalado e configurado o Yup — implementada validação de entrada para criação de usuários, garantindo campos obrigatórios, formato correto de e-mail, tamanho mínimo da senha e retorno estruturado de erros de validação.
+
+52. Implementada verificação de e-mail duplicado — adicionada consulta ao banco utilizando User.findOne() para impedir cadastro de múltiplos usuários com o mesmo endereço de e-mail.
+
+53. Instalado o bcrypt — adicionada ao projeto a biblioteca responsável pela criptografia de senhas.
+
+54. Implementada criptografia de senha no UserController — utilizando bcrypt.hash(password, 10) para transformar a senha recebida em um hash seguro antes de salvar no PostgreSQL.
+
+55. Alterado o fluxo de criação de usuários — a API passou a receber o campo password, gerar automaticamente o password_hash criptografado e armazenar apenas o hash no banco de dados.
+
+56. Implementada primeira camada de segurança de credenciais — eliminada a gravação de senhas em texto puro no banco de dados.
