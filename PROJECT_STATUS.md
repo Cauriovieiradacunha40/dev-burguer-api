@@ -120,3 +120,5 @@
 55. Alterado o fluxo de criação de usuários — a API passou a receber o campo password, gerar automaticamente o password_hash criptografado e armazenar apenas o hash no banco de dados.
 
 56. Implementada primeira camada de segurança de credenciais — eliminada a gravação de senhas em texto puro no banco de dados.
+
+57. Validado diagnóstico e correção de rota /sessions, compreendendo a diferença entre URL da requisição e rota registrada no Express.
