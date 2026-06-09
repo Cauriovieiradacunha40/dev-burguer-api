@@ -19,6 +19,7 @@ class UserController {
       password: Yup.string().min(6).required(),
       admin: Yup.boolean(),
     });
+
     try {
       schema.validateSync(request.body, { abortEarly: false, strict: true });
     } catch (err) {
@@ -32,6 +33,7 @@ class UserController {
         email,
       },
     });
+    
     if (existingUser) {
       return response.status(400).json({ mensagem: 'Email already taken' });
     }
