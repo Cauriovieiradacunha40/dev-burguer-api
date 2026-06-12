@@ -1,50 +1,30 @@
 
-# 🌳 ESTRUTURA OFICIAL — DEV-BURGUER-API
+DEV-BURGUER-API
 
-DEV-BURGUER-API/
+├── node_modules
 │
-├── node_modules/
-│
-├── src/
-│   │
-│   ├── app/
-│   │   │
-│   │   ├── controllers/
-│   │   │   │
-│   │   │   └── UserController.js
-│   │   │
-│   │   └── models/
-│   │       │
-│   │       └── User.js
-│   │
-│   ├── config/
-│   │   │
-│   │   └── database.cjs
-│   │
-│   ├── database/
-│   │   │
-│   │   ├── index.js
-│   │   │
-│   │   └── migrations/
-│   │       │
-│   │       └── 20260527090857-create-users-table.js
-│   │
-│   ├── routes.js
-│   │
-│   ├── app.js
-│   │
-│   └── server.js
-│
-├── .gitignore
-│
-├── .sequelizerc
-│
-├── biome.json
-│
-├── package.json
-│
-├── pnpm-lock.yaml
-│
-├── PROJECT_STRUCTURE.md
-│
-└── PROJECT_STATUS.md
+└── src
+    │
+    ├── app
+    │   │
+    │   ├── controllers
+    │   │   ├── ProductController.js
+    │   │   ├── SessionController.js
+    │   │   └── UserController.js
+    │   │
+    │   └── models
+    │       ├── Product.js
+    │       └── User.js
+    │
+    ├── config
+    │   └── database.cjs
+    │
+    ├── database
+    │   ├── index.js
+    │   └── migrations
+    │       ├── 20260527090857-create-users-table.js
+    │       └── 20260610090701-create-products-table.js
+    │
+    ├── app.js
+    ├── routes.js
+    └── server.js

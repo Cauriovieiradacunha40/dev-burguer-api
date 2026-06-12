@@ -122,3 +122,89 @@
 56. Implementada primeira camada de segurança de credenciais — eliminada a gravação de senhas em texto puro no banco de dados.
 
 57. Validado diagnóstico e correção de rota /sessions, compreendendo a diferença entre URL da requisição e rota registrada no Express.
+
+58. Criado o arquivo `SessionController.js` dentro da pasta `controllers` — iniciada a camada responsável pela autenticação de usuários através de login.
+
+59. Criada a rota `POST /session` — endpoint responsável por receber credenciais de acesso e iniciar o processo de autenticação.
+
+60. Implementada validação de login utilizando Yup — adicionadas regras para validação de e-mail e senha antes da autenticação.
+
+61. Implementada busca de usuário por e-mail utilizando `User.findOne()` — permitindo localizar usuários cadastrados no PostgreSQL durante o login.
+
+62. Implementada verificação de senha utilizando `bcrypt.compare()` — comparando de forma segura a senha enviada pelo usuário com o `password_hash` armazenado no banco de dados.
+
+63. Realizado troubleshooting completo do fluxo de autenticação — identificados e corrigidos erros relacionados a JSON inválido, validações Yup e importação do bcrypt.
+
+64. Validado o funcionamento completo da rota `POST /session` através do Insomnia — confirmando a integração entre rota, controller, Sequelize e PostgreSQL.
+
+65. Realizado o primeiro login com sucesso na aplicação — retorno HTTP 200 OK confirmando autenticação válida.
+
+66. Implementado retorno seguro de dados do usuário autenticado — retornando apenas id, name, email e admin, sem expor informações sensíveis.
+
+67. Confirmada a integração completa entre Express, Sequelize, PostgreSQL, Yup e bcrypt durante o processo de autenticação.
+
+68. Instalado e configurado o Insomnia para testes de autenticação — criando requisições específicas para cadastro e login de usuários.
+
+69. Realizado o primeiro backup oficial do banco de dados PostgreSQL — gerado o arquivo `backup-001-users-module-stable.backup` utilizando `pg_dump` executado diretamente no container Docker.
+
+70. Estruturadas as pastas de backup do projeto — separando backups de código-fonte (`code_backups`) e backups de banco de dados (`database_backups`).
+
+71. Validado o fluxo completo de autenticação — Login → Validação Yup → Busca no banco → bcrypt.compare() → Resposta HTTP 200 OK.
+
+72. Concluído o primeiro módulo completo de usuários da aplicação — incluindo cadastro, validação, criptografia de senha, autenticação e persistência segura de dados.
+
+73. Criada a migration create-products-table — iniciada a estrutura de banco de dados para o módulo de produtos, gerando um novo arquivo de migration versionado pelo Sequelize.
+
+74. Implementada a migration create-products-table — definida a estrutura inicial da tabela products, incluindo chave primária auto incremento, nome, preço, caminho da imagem, categoria e campos de auditoria (created_at e updated_at).
+
+Tabela criada:
+products
+
+Campos:
+- id (INTEGER, PK, AUTO_INCREMENT)
+- name (STRING)
+- price (STRING)
+- path (STRING)
+- category (STRING)
+- created_at (DATE)
+- updated_at (DATE)
+
+75. Executada a migration create-products-table com sucesso — a tabela products foi criada fisicamente no PostgreSQL e validada através do Beekeeper Studio.
+
+Tabelas atuais:
+- users
+- products
+- SequelizeMeta
+
+76. Criado e integrado o ProductController — implementada a primeira rota POST /products, retornando resposta HTTP 201 para validação da estrutura inicial do módulo de produtos.
+
+77. Realizado troubleshooting de importação ES Modules — identificado e corrigido erro ERR_MODULE_NOT_FOUND causado por divergência entre o nome do arquivo ProductController.js e o caminho utilizado no import.
+
+78. Implementada validação de produtos com Yup — a API passou a validar os dados recebidos na rota POST /products antes de processar a requisição.
+
+79. Validado o campo price como número — identificado e corrigido erro de tipo (string → number) durante os testes no Insomnia.
+
+80. Realizado primeiro teste bem-sucedido da rota POST /products — a requisição foi aceita após atender às regras de validação definidas no ProductController.
+
+81. Criado o ProductController.js — iniciada a camada de controle do módulo de produtos seguindo a arquitetura MVC.
+
+82. Integrada a rota POST /products ao sistema de rotas da API.
+
+83. Implementada validação de produtos utilizando Yup, exigindo:
+- name
+- price
+- category
+
+84. Validado o primeiro fluxo funcional do módulo de produtos através do Insomnia.
+
+85. Criada a migration create-products-table — adicionada a segunda migration oficial do projeto para criação da tabela products.
+
+86. Executada e validada a migration create-products-table — tabela products confirmada no PostgreSQL através do Beekeeper Studio.
+
+87. Estrutura da camada database atualizada — projeto possui index.js para inicialização do Sequelize e pasta migrations para versionamento do banco.
+
+88. Criado o Model Product.js — iniciada a representação da tabela products dentro da aplicação utilizando Sequelize.
+
+89. Estruturado o Product Model seguindo o padrão utilizado anteriormente no User Model.
+
+90. Concluída a Aula 21 — Criando Model de Produto.
