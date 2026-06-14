@@ -208,3 +208,73 @@ Tabelas atuais:
 89. Estruturado o Product Model seguindo o padrão utilizado anteriormente no User Model.
 
 90. Concluída a Aula 21 — Criando Model de Produto.
+
+91. Instalado o Multer — adicionada a biblioteca responsável pelo upload de arquivos na aplicação, preparando o módulo de imagens dos produtos.
+
+92. Configurado o Multer para armazenamento local de arquivos.
+
+✔ diskStorage configurado
+✔ pasta uploads definida
+✔ geração de nomes únicos com UUID
+✔ preparado recebimento de imagens de produtos
+
+92. Criada a pasta uploads — definida a estrutura para armazenamento local de imagens enviadas pelo Multer.
+
+93. Primeiro upload realizado com sucesso — arquivo recebido e salvo fisicamente pelo Multer na pasta uploads.
+
+94. Validado o fluxo inicial de upload de arquivos da aplicação.
+
+95. Corrigida a geração do nome dos arquivos enviados pelo Multer utilizando UUID + nome original.
+
+96. Validado o upload de imagem preservando a extensão do arquivo (.png).
+
+97. Confirmado armazenamento físico da imagem na pasta uploads.
+
+98. Validado o preview da imagem diretamente no VS Code.
+
+99. Concluída a configuração funcional de upload de imagens com Multer.
+
+100. Validado o recebimento dos campos name, price e category via Multipart Form.
+
+101. Validado o recebimento da imagem através do request.file.
+
+102. Confirmado o funcionamento completo do Multer integrado ao ProductController.
+
+103. Validado o fluxo completo de upload e processamento de dados do produto.
+
+104. Implementado Product.create() para persistência de produtos.
+
+105. Corrigido o mapeamento do campo path no Product.create().
+
+106. Produto salvo com sucesso na tabela products do PostgreSQL.
+
+107. Validada a integração completa entre Multer, Sequelize e PostgreSQL.
+
+108. Criado o middleware fileRoutes.cjs para exposição pública dos arquivos da pasta uploads.
+
+109. Configurado Express.static() para servir imagens armazenadas localmente.
+
+110. Integrado o middleware de arquivos ao app.js.
+
+111. Validado o carregamento do middleware através do retorno [Function: serveStatic].
+
+112. Implementado ProductController.
+113. Configurada rota POST /products.
+114. Recebimento de arquivos via multipart/form-data.
+115. Salvamento automático das imagens na pasta uploads.
+116. Geração de nomes únicos com UUID.
+117. Persistência de produtos no PostgreSQL.
+118. Criado fileRoutes.cjs.
+119. Configurado Express.static para arquivos públicos.
+120. Criada rota pública /product-file.
+121. Validação da URL da imagem pelo navegador.
+122. Imagem acessada externamente através da URL pública.
+123. Validação completa da URL da imagem pelo navegador.
+124. Produto retornando imagem acessível externamente.
+124. Produto retornando imagem acessível externamente.
+
+125. Implementado endpoint para listagem de produtos.
+
+126. Executada consulta SELECT na tabela products através do Sequelize.
+
+127. Validada a busca de produtos armazenados no PostgreSQL.
