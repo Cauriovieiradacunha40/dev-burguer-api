@@ -278,3 +278,21 @@ Tabelas atuais:
 126. Executada consulta SELECT na tabela products através do Sequelize.
 
 127. Validada a busca de produtos armazenados no PostgreSQL.
+
+128. Estudado o conceito de JWT (JSON Web Token), mecanismo moderno de autenticação utilizado para identificar usuários autenticados em APIs sem necessidade de manter sessão no servidor.
+
+129. jsonwebtoken instalado
+
+128. Estudado o conceito de JWT (JSON Web Token), mecanismo moderno de autenticação utilizado para identificar usuários autenticados em APIs.
+
+129. Instalada a biblioteca jsonwebtoken para implementação da autenticação JWT no projeto.
+
+130. Iniciada a implementação do JWT no SessionController, incluindo importação da biblioteca, geração de token e preparação da resposta autenticada ao usuário.
+
+131. Concluída a autenticação JWT no login, com validação de credenciais, geração de token com validade de 7 dias e retorno dos dados autenticados do usuário pelo endpoint POST /session.
+
+132. Criado o arquivo auth.js na pasta config para centralizar as configurações do JWT.
+
+133. Definidas no auth.js a chave secreta (secret) e o tempo de expiração (expiresIn), permitindo reutilização das configurações de autenticação em toda a aplicação.
+
+
