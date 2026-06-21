@@ -295,4 +295,14 @@ Tabelas atuais:
 
 133. Definidas no auth.js a chave secreta (secret) e o tempo de expiração (expiresIn), permitindo reutilização das configurações de autenticação em toda a aplicação.
 
+134. Criada a pasta middlewares na raiz de src e iniciado o arquivo auth.js para implementação do middleware de autenticação JWT.
 
+135. Implementado o middleware de autenticação JWT na pasta middlewares, responsável por interceptar requisições protegidas da API.
+
+136. Adicionada a validação do header Authorization, verificando a existência do Bearer Token antes do acesso às rotas protegidas.
+
+137. Implementada a validação do JWT utilizando jwt.verify, permitindo autenticar usuários e bloquear tokens inválidos com resposta HTTP 401.
+
+138. Configurada a identificação do usuário autenticado através de request.userId, disponibilizando o ID do usuário para uso nos controllers após a validação do token.
+
+139. Protegidas as rotas de produtos utilizando routes.use(authMiddlewar), exigindo autenticação JWT para acesso aos endpoints privados da API.
