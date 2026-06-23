@@ -306,3 +306,19 @@ Tabelas atuais:
 138. Configurada a identificação do usuário autenticado através de request.userId, disponibilizando o ID do usuário para uso nos controllers após a validação do token.
 
 139. Protegidas as rotas de produtos utilizando routes.use(authMiddlewar), exigindo autenticação JWT para acesso aos endpoints privados da API.
+
+140. Criada a migration create-categories-table para versionar a criação da tabela categories no banco de dados.
+
+141. Executada a migration da tabela categories utilizando o Sequelize CLI, criando a estrutura da tabela no PostgreSQL.
+
+142. Criada a Model Category para representar a tabela categories e permitir sua manipulação através do Sequelize ORM.
+
+143. Implementado o CategoryController com os endpoints para cadastro e listagem de categorias.
+
+144. Adicionadas as rotas POST /categories e GET /categories, protegidas pelo middleware de autenticação JWT.
+
+145. Validado o funcionamento completo do módulo de categorias através do Insomnia, incluindo cadastro e listagem de categorias autenticadas.
+
+146. Corrigido um ReferenceError no método index do CategoryController, ajustando o retorno da variável products para categories.
+
+
