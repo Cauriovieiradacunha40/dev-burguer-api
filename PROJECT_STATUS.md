@@ -321,4 +321,4 @@ Tabelas atuais:
 
 146. Corrigido um ReferenceError no método index do CategoryController, ajustando o retorno da variável products para categories.
 
-
+147. Implementada validação para impedir o cadastro de categorias duplicadas. Antes de criar uma nova categoria, o sistema consulta o banco de dados e, caso o nome já exista, retorna erro 400 ("Category already exists"), garantindo a integridade e evitando registros duplicados.
