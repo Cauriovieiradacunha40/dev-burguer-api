@@ -322,3 +322,20 @@ Tabelas atuais:
 146. Corrigido um ReferenceError no método index do CategoryController, ajustando o retorno da variável products para categories.
 
 147. Implementada validação para impedir o cadastro de categorias duplicadas. Antes de criar uma nova categoria, o sistema consulta o banco de dados e, caso o nome já exista, retorna erro 400 ("Category already exists"), garantindo a integridade e evitando registros duplicados.
+
+148. Estudado o conceito de relacionamento entre tabelas em bancos de dados relacionais, compreendendo como chaves estrangeiras (Foreign Keys) estabelecem vínculos entre entidades e como o Sequelize representa esses relacionamentos por meio de associações entre models.
+
+149. Removida a coluna category da tabela products por meio de migration, preparando a estrutura do banco para normalização dos dados e relacionamento com a tabela categories.
+
+150. Adicionada a coluna category_id na tabela products como chave estrangeira (Foreign Key), estabelecendo a base do relacionamento entre produtos e categorias no PostgreSQL.
+
+151. Ajustada a model Product para definir o relacionamento belongsTo com a model Category, utilizando a chave estrangeira category_id e o alias category.
+
+152. Atualizado o arquivo database/index.js para registrar automaticamente as associações entre as models após sua inicialização, permitindo que o Sequelize reconheça os relacionamentos da aplicação.
+
+
+153. Atualizado o método index do ProductController para utilizar o recurso include do Sequelize, carregando automaticamente os dados relacionados da categoria de cada produto.
+
+154. Configurado o retorno apenas dos campos id e name da categoria utilizando a opção attributes, reduzindo a quantidade de dados enviados pela API.
+
+155. Validado o relacionamento Product → Category através do GET /products, retornando um objeto category contendo os dados da categoria associada ao produto.
