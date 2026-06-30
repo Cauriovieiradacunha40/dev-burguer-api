@@ -1,46 +1,6 @@
 
 
 
-
-DEV-BURGUER-API
-│
-├── src
-│   │
-│   ├── app
-│   │   ├── controllers
-│   │   │   ├── ProductController.js
-│   │   │   ├── SessionController.js
-│   │   │   ├── UserController.js
-│   │   │   └── CategoryController.js      ← NOVO
-│   │   │
-│   │   ├── models
-│   │   │   ├── Product.js
-│   │   │   ├── User.js
-│   │   │   └── Category.js                ← NOVO
-│   │
-│   ├── config
-│   │   ├── auth.js
-│   │   ├── database.cjs
-│   │   ├── fileRoutes.cjs
-│   │   └── multer.cjs
-│   │
-│   ├── database
-│   │   └── migrations
-│   │       ├── ...
-│   │       └── 20260622083528-create-categories-table.js   ← NOVA
-│   │
-│   ├── middlewares
-│   │   └── auth.js
-│   │
-│   ├── app.js
-│   ├── routes.js
-│   └── server.js
-
-
-
-
-
-
 📁 DEV-BURGUER-API
 │
 ├── 📁 node_modules
@@ -77,6 +37,7 @@ DEV-BURGUER-API
 │   │   └── index.js
 │   │
 │   ├── 📁 middlewares
+│   │   ├── admin.js
 │   │   └── auth.js
 │   │
 │   ├── app.js
@@ -92,3 +53,6 @@ DEV-BURGUER-API
 ├── package.json
 ├── pnpm-lock.yaml
 └── README.md
+
+
+

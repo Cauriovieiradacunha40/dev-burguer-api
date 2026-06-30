@@ -339,3 +339,15 @@ Tabelas atuais:
 154. Configurado o retorno apenas dos campos id e name da categoria utilizando a opção attributes, reduzindo a quantidade de dados enviados pela API.
 
 155. Validado o relacionamento Product → Category através do GET /products, retornando um objeto category contendo os dados da categoria associada ao produto.
+
+156. Criado o middleware de autorização admin.js, responsável por verificar se o usuário autenticado possui privilégios administrativos antes de permitir o acesso a rotas restritas.
+
+157. Implementada a leitura da propriedade request.userIsAdmin no middleware de administrador, utilizando a informação disponibilizada pelo middleware de autenticação para decidir se a requisição pode prosseguir.
+
+158. Configurada a validação de usuários administradores no middleware admin.js. Quando o usuário não possui privilégios administrativos (admin = false), a API interrompe a requisição e retorna HTTP 401 Unauthorized.
+
+159. Integrado o middleware de administrador às rotas protegidas, restringindo operações administrativas apenas para usuários autorizados.
+
+160. Validado o funcionamento do middleware de autorização através de testes práticos no Insomnia. Com o campo admin definido como false no banco de dados, a API bloqueou o acesso às rotas protegidas retornando HTTP 401 Unauthorized.
+
+161. Confirmado o comportamento esperado do middleware após alterar o campo admin para true no banco de dados. O usuário voltou a acessar normalmente as rotas administrativas, comprovando o correto funcionamento da autorização baseada em permissões.
