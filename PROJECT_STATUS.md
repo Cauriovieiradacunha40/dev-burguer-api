@@ -351,3 +351,23 @@ Tabelas atuais:
 160. Validado o funcionamento do middleware de autorização através de testes práticos no Insomnia. Com o campo admin definido como false no banco de dados, a API bloqueou o acesso às rotas protegidas retornando HTTP 401 Unauthorized.
 
 161. Confirmado o comportamento esperado do middleware após alterar o campo admin para true no banco de dados. O usuário voltou a acessar normalmente as rotas administrativas, comprovando o correto funcionamento da autorização baseada em permissões.
+
+162. Criada a migration include-offer-in-products para adicionar a coluna offer à tabela products, permitindo identificar produtos em oferta.
+
+163. Adicionada a coluna offer na tabela products utilizando o tipo BOOLEAN, com valor padrão false e preenchimento obrigatório (allowNull: false).
+
+164. Atualizada a model Product para suportar o novo atributo offer, permitindo seu uso pela aplicação.
+
+165. Atualizado o método create do ProductController para aceitar e persistir o campo offer durante o cadastro de novos produtos.
+
+166. Validado o cadastro de produtos contendo o campo offer, confirmando o correto armazenamento da informação no PostgreSQL.
+
+167. Criada a rota PUT /products/:id para permitir a atualização de produtos existentes através do padrão REST.
+
+168. Implementado o método update no ProductController para atualizar produtos já cadastrados utilizando o Sequelize.
+
+169. Validada a atualização parcial de produtos, permitindo modificar apenas os campos enviados na requisição, preservando os demais dados.
+
+170. Corrigido um erro de implementação causado por um erro de digitação (awaitProduct em vez de await Product), restaurando o funcionamento do método de atualização.
+
+171. Validado o funcionamento completo da atualização de produtos, incluindo alteração de nome, oferta e atualização automática do campo updatedAt.
